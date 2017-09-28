@@ -2,6 +2,7 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
 
 1. [Ejercicio 1: Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.](#ejercicio-1-consultar-en-el-catlogo-de-alguna-tienda-de-informtica-el-precio-de-un-ordenador-tipo-servidor-y-calcular-su-coste-de-amortizacin-a-cuatro-y-siete-aos)
+2. [Ejercicio 2: Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.](#ejercicio-2-usando-las-tablas-de-precios-de-servicios-de-alojamiento-en-internet-y-de-proveedores-de-servicios-en-la-nube-comparar-el-coste-durante-un-ao-de-un-ordenador-con-un-procesador-estndar-escogerlo-de-forma-que-sea-el-mismo-tipo-de-procesador-en-los-dos-vendedores-y-con-el-resto-de-las-caractersticas-similares-tamao-de-disco-duro-equivalente-a-transferencia-de-disco-duro-en-el-caso-de-que-la-infraestructura-comprada-se-usa-slo-el-1-o-el-10-del-tiempo)
 
 <!-- /TOC -->
 
@@ -36,3 +37,76 @@ Cuota de amortización: 90,79€ (redondeado hacia abajo)
 |7     |635,54€                  |0€      |
 
 *(el valor del penúltimo año difiere un poco de la cuota de amortización por el redondeo)*
+
+# Ejercicio 2: Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.
+
+Los servidores que se van a analizar son los siguientes:
+
+- [Cloud Next 1 (arsys)](https://www.arsys.es/servidores/cloud): 1vCPU, 1GB memoria RAM, 40GB SSD por 15 €/mes.
+
+- [Cloud M (1and1)](https://www.1and1.es/servidor-cloud-dinamico#configuracion-del-servidor):
+1vCore, 1GB memoria RAM, 50GB SSD por 0,014 €/hora
+
+- Cloud M (1and1) facturación mensual: 1vCore, 1GB memoria RAM, 50GB SSD por 9,99 €/mes
+
+- [t2.micro (amazon)](https://aws.amazon.com/es/ec2/pricing/):
+1vCore, 1GB memoria RAM, almacenamiento EBS por 0,014$/hora
+
+Suponiendo que los servidores se contratan durante un año (8760 horas):
+
+- **Cloud Next 1:** 15 €/mes x 12 meses = 180€
+
+- **Cloud M (facturación mensual):** 9,99 €/mes x 12 meses = 119,88€
+
+Ambos tienen un precio fijo independientemente del uso.
+
+- **Cloud M (facturación por hora y 1% de uso):** 8760 horas x 0,01 x 0,014€/hora = 1,23€
+
+- **t2.micro (1% de uso):** 8760 horas x 0,01 x 0,014$/hora = 1,23$
+
+- **Cloud M (facturación por hora y 10% de uso):** 8760 horas x 0,1 x 0,014€/hora = 12,26€
+
+- **t2.micro (10% de uso):** 8760 horas x 0,1 x 0,014$/hora = 12,26$
+
+Como podemos ver, resulta mucho más económico contratar los servidores por hora cuando no se va a realizar un uso completo de él. En el caso de que se usara el 100% del tiempo, el Cloud M con facturación mensual sería (aproximadamente) 3€ más económico que los servidores contratados por tiempo de uso.
+
+
+# En general, cualquier ordenador con menos de 5 o 6 años tendrá estos flags. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden? Si usas una máquina virtual, ¿qué resultado da? ¿Y en una Raspberry Pi o, si tienes acceso, el procesador del móvil?
+
+* Ordenador portatil 1: Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
+
+```
+Architecture:        x86_64
+...
+Model name:          Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
+...
+Virtualization:      VT-x
+...
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault epb tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+```
+
+* Ordenador portatil 2: Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+```
+Architecture:        x86_64
+...
+Model name:          Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+...
+Virtualization:      VT-x
+...
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb intel_pt tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp
+```
+
+* Dispositivo movil (android): Intel(R) Atom(TM) CPU  Z3580  @ 1.33GHz
+```
+Architecture:        i686
+...
+Model name:          Intel(R) Atom(TM) CPU  Z3580  @ 1.33GHz
+...
+Virtualization:      VT-x
+...
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes rdrand lahf_lm 3dnowprefetch ida arat epb dtherm tpr_shadow vnmi flexpriority ept vpid tsc_adjust smep erms
+```
+
+* Máquina virtual corriendo Ubuntu Server en el primer ordenador portatil: Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
+
+![Ubuntu Server](./img/vm_lscpu.png "lscpu en Ubuntu Server")
