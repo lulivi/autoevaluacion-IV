@@ -1,5 +1,5 @@
 
-!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:1 -->
+<!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:1 -->
 
 1. [Ejercicio 1: Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.](#ejercicio-1-consultar-en-el-catlogo-de-alguna-tienda-de-informtica-el-precio-de-un-ordenador-tipo-servidor-y-calcular-su-coste-de-amortizacin-a-cuatro-y-siete-aos)
 2. [Ejercicio 2: Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.](#ejercicio-2-usando-las-tablas-de-precios-de-servicios-de-alojamiento-en-internet-y-de-proveedores-de-servicios-en-la-nube-comparar-el-coste-durante-un-ao-de-un-ordenador-con-un-procesador-estndar-escogerlo-de-forma-que-sea-el-mismo-tipo-de-procesador-en-los-dos-vendedores-y-con-el-resto-de-las-caractersticas-similares-tamao-de-disco-duro-equivalente-a-transferencia-de-disco-duro-en-el-caso-de-que-la-infraestructura-comprada-se-usa-slo-el-1-o-el-10-del-tiempo)
@@ -7,6 +7,7 @@
 4. [Ejercicio 4: Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.](#ejercicio-4-comprobar-si-el-ncleo-instalado-en-tu-ordenador-contiene-este-mdulo-del-kernel-usando-la-orden-kvm-ok-instalar-un-hipervisor-para-gestionar-mquinas-virtuales-que-ms-adelante-se-podr-usar-en-pruebas-y-ejercicios)
 	1. [Comprobar la existencia del módulo kvm](#comprobar-la-existencia-del-mdulo-kvm)
 	2. [Instalación de un hipervisor para gestionar máquinas virtuales.](#instalacin-de-un-hipervisor-para-gestionar-mquinas-virtuales)
+5. [Ejercicio 5: Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.](#ejercicio-5-darse-de-alta-en-servicios-de-nube-usando-ofertas-gratuitas-o-cupones-que-pueda-proporcionar-el-profesor)
 
 <!-- /TOC -->
 
@@ -134,3 +135,23 @@ Podemos comprobar que sí que tiene soporte para virtualizar.
 Dado que he tenido que instalar un [hipervisor](https://www.virtualbox.org/ "VirtualBox") para otras asignaturas, ya lo tengo funcionando.
 
 ![VirtualBox](./img/virtualbox.png "Hipervisor")
+
+# Ejercicio 5: Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.
+
+Para este ejercicio, voy a utilizar un código de Azure que me ha proporcionado el profesor.
+
+Para utilizar el código promocional tenemos que entrar en [la página de azure](https://www.microsoftazurepass.com) y seguír [los pasos que nos proporciona la propia pagina](https://www.microsoftazurepass.com/Home/HowTo) para el canjeo de códigos
+
+Despues de loguear con la cuenta de Microsoft, tenemos que poner nuestro código promocional:
+![Código](./img/codigo_azure.png)
+
+Rellenamos la información necesaria:
+![Información](./img/info_azure.png)
+
+Después de una serie de procedimientos de validación de la nueva cuenta, podemos acceder a través del correo a la página principal de Azure:
+![Pagina principal](./img/pagina_principal_azure.png)
+
+Y finalmente a nuestra subscripción:
+![Subscripcion](./img/subscripcion_azure.png)
+
+Podemos observar que tenemos la subscripción activada.
