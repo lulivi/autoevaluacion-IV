@@ -71,7 +71,7 @@ Ambos tienen un precio fijo independientemente del uso.
 Como podemos ver, resulta mucho más económico contratar los servidores por hora cuando no se va a realizar un uso completo de él. En el caso de que se usara el 100% del tiempo, el Cloud M con facturación mensual sería (aproximadamente) 3€ más económico que los servidores contratados por tiempo de uso.
 
 
-# En general, cualquier ordenador con menos de 5 o 6 años tendrá estos flags. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden? Si usas una máquina virtual, ¿qué resultado da? ¿Y en una Raspberry Pi o, si tienes acceso, el procesador del móvil?
+# Ejercicio 3: En general, cualquier ordenador con menos de 5 o 6 años tendrá estos flags. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden? Si usas una máquina virtual, ¿qué resultado da? ¿Y en una Raspberry Pi o, si tienes acceso, el procesador del móvil?
 
 * Ordenador portatil 1: Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
 
@@ -110,3 +110,23 @@ Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cm
 * Máquina virtual corriendo Ubuntu Server en el primer ordenador portatil: Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
 
 ![Ubuntu Server](./img/vm_lscpu.png "lscpu en Ubuntu Server")
+
+# Ejercicio 4: Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.
+
+## Comprobar la existencia del módulo kvm
+
+Dado que no he encontrado nada sobre esa orden para archlinux, buscando en [archwiki](wiki.archlinux.org) he encontrado esto en el post de  [kvm](https://wiki.archlinux.org/index.php/KVM#Checking_support_for_KVM). Como yo tengo un procesador Intel, tengo que tener el tipo de virtualización VT-x en el comando `lscpu`:
+
+```bash
+$ lscpu | grep 'VT-x'
+
+Virtualization:      VT-x
+```
+
+Podemos comprobar que sí que tiene soporte para virtualizar.
+
+## Instalación de un hipervisor para gestionar máquinas virtuales.
+
+Dado que he tenido que instalar un [hipervisor](https://www.virtualbox.org/ "VirtualBox") para otras asignaturas, ya lo tengo funcionando.
+
+![VirtualBox](./img/virtualbox.png "Hipervisor")
