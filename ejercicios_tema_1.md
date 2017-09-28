@@ -1,13 +1,14 @@
 
-<!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:1 -->
+<!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-1. [Ejercicio 1: Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.](#ejercicio-1-consultar-en-el-catlogo-de-alguna-tienda-de-informtica-el-precio-de-un-ordenador-tipo-servidor-y-calcular-su-coste-de-amortizacin-a-cuatro-y-siete-aos)
-2. [Ejercicio 2: Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.](#ejercicio-2-usando-las-tablas-de-precios-de-servicios-de-alojamiento-en-internet-y-de-proveedores-de-servicios-en-la-nube-comparar-el-coste-durante-un-ao-de-un-ordenador-con-un-procesador-estndar-escogerlo-de-forma-que-sea-el-mismo-tipo-de-procesador-en-los-dos-vendedores-y-con-el-resto-de-las-caractersticas-similares-tamao-de-disco-duro-equivalente-a-transferencia-de-disco-duro-en-el-caso-de-que-la-infraestructura-comprada-se-usa-slo-el-1-o-el-10-del-tiempo)
-3. [Ejercicio 3: En general, cualquier ordenador con menos de 5 o 6 años tendrá estos flags. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden? Si usas una máquina virtual, ¿qué resultado da? ¿Y en una Raspberry Pi o, si tienes acceso, el procesador del móvil?](#ejercicio-3-en-general-cualquier-ordenador-con-menos-de-5-o-6-aos-tendr-estos-flags-qu-modelo-de-procesador-es-qu-aparece-como-salida-de-esa-orden-si-usas-una-mquina-virtual-qu-resultado-da-y-en-una-raspberry-pi-o-si-tienes-acceso-el-procesador-del-mvil)
-4. [Ejercicio 4: Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.](#ejercicio-4-comprobar-si-el-ncleo-instalado-en-tu-ordenador-contiene-este-mdulo-del-kernel-usando-la-orden-kvm-ok-instalar-un-hipervisor-para-gestionar-mquinas-virtuales-que-ms-adelante-se-podr-usar-en-pruebas-y-ejercicios)
-	1. [Comprobar la existencia del módulo kvm](#comprobar-la-existencia-del-mdulo-kvm)
-	2. [Instalación de un hipervisor para gestionar máquinas virtuales.](#instalacin-de-un-hipervisor-para-gestionar-mquinas-virtuales)
-5. [Ejercicio 5: Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.](#ejercicio-5-darse-de-alta-en-servicios-de-nube-usando-ofertas-gratuitas-o-cupones-que-pueda-proporcionar-el-profesor)
+- [Ejercicio 1: Consultar en el catálogo de alguna tienda de informática el precio de un ordenador tipo servidor y calcular su coste de amortización a cuatro y siete años.](#ejercicio-1-consultar-en-el-catlogo-de-alguna-tienda-de-informtica-el-precio-de-un-ordenador-tipo-servidor-y-calcular-su-coste-de-amortizacin-a-cuatro-y-siete-aos)
+- [Ejercicio 2: Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.](#ejercicio-2-usando-las-tablas-de-precios-de-servicios-de-alojamiento-en-internet-y-de-proveedores-de-servicios-en-la-nube-comparar-el-coste-durante-un-ao-de-un-ordenador-con-un-procesador-estndar-escogerlo-de-forma-que-sea-el-mismo-tipo-de-procesador-en-los-dos-vendedores-y-con-el-resto-de-las-caractersticas-similares-tamao-de-disco-duro-equivalente-a-transferencia-de-disco-duro-en-el-caso-de-que-la-infraestructura-comprada-se-usa-slo-el-1-o-el-10-del-tiempo)
+- [Ejercicio 3: En general, cualquier ordenador con menos de 5 o 6 años tendrá estos flags. ¿Qué modelo de procesador es? ¿Qué aparece como salida de esa orden? Si usas una máquina virtual, ¿qué resultado da? ¿Y en una Raspberry Pi o, si tienes acceso, el procesador del móvil?](#ejercicio-3-en-general-cualquier-ordenador-con-menos-de-5-o-6-aos-tendr-estos-flags-qu-modelo-de-procesador-es-qu-aparece-como-salida-de-esa-orden-si-usas-una-mquina-virtual-qu-resultado-da-y-en-una-raspberry-pi-o-si-tienes-acceso-el-procesador-del-mvil)
+- [Ejercicio 4: Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.](#ejercicio-4-comprobar-si-el-ncleo-instalado-en-tu-ordenador-contiene-este-mdulo-del-kernel-usando-la-orden-kvm-ok-instalar-un-hipervisor-para-gestionar-mquinas-virtuales-que-ms-adelante-se-podr-usar-en-pruebas-y-ejercicios)
+	- [Comprobar la existencia del módulo kvm](#comprobar-la-existencia-del-mdulo-kvm)
+	- [Instalación de un hipervisor para gestionar máquinas virtuales.](#instalacin-de-un-hipervisor-para-gestionar-mquinas-virtuales)
+- [Ejercicio 5: Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.](#ejercicio-5-darse-de-alta-en-servicios-de-nube-usando-ofertas-gratuitas-o-cupones-que-pueda-proporcionar-el-profesor)
+- [Ejercicio 6: Darse de alta en una web que permita hacer pruebas con alguno de los sistemas de gestión de nube anteriores.](#ejercicio-6-darse-de-alta-en-una-web-que-permita-hacer-pruebas-con-alguno-de-los-sistemas-de-gestin-de-nube-anteriores)
 
 <!-- /TOC -->
 
@@ -155,3 +156,11 @@ Y finalmente a nuestra subscripción:
 ![Subscripcion](./img/subscripcion_azure.png)
 
 Podemos observar que tenemos la subscripción activada.
+
+# Ejercicio 6: Darse de alta en una web que permita hacer pruebas con alguno de los sistemas de gestión de nube anteriores.
+
+Dado que tengo subscripción Azure, tenemos que irnos al [panel principal](https://portal.azure.com/ "Panel principal Azure"). Lo siguiente que tenemos que hacer es crear un nuevo `Dev Test` pulsando en `Nuevo > Herramientas de desarrollo > Laboratorios de Dev Test`:
+![Tests](./img/nuevo_dev_test.png)
+
+Nos aparecerá la siguiente pantalla en la que podrémos crear los test que consideremos oportunos:
+![Nuevo Test](./img/info_dev_test.png)
