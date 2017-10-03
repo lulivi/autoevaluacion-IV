@@ -14,7 +14,7 @@ Repositorio para autoevaluación y resolución de ejercicios de la asignatura
 
 ## Enlaces a los ejercicios
 
-[Ejercicios tema 1](./ejercicios_tema_1.md)
+[Ejercicios tema 1](./hito_1/ejercicios_tema_1.md)
 
 ## Licencia
 
