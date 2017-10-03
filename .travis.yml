@@ -1,7 +1,0 @@
-language: python
-python:
-  - "3.6"
-cache: pip
-install: true
-script:
-  - cd ./hito_2/tests/ && pytest
