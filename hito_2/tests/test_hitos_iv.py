@@ -15,6 +15,12 @@ class HitosIvTest(unittest.TestCase):
             hitos_iv.read_json('../hitos.json') == {},
             'Diccionario no vacío')
 
+    def test_milestone_number(self):
+        """Test para obtenerr numero de hitos."""
+        mil_dict = hitos_iv.read_json('../hitos.json')
+        self.assertEqual(
+            hitos_iv.milestone_number(mil_dict), 2, "Número correcto de hitos")
+
 
 if __name__ == '__main__':
     unittest.main()
