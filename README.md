@@ -1,5 +1,6 @@
 # Autoevaluación de Infraestructura Virtual
 
+[![Build Status](https://travis-ci.org/lulivi/autoevaluacion-IV.svg?branch=master)](https://travis-ci.org/lulivi/autoevaluacion-IV)
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
