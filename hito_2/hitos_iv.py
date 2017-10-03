@@ -16,8 +16,14 @@ def read_json(json_file='hitos.json'):
         return milestone_dict
 
 
+def milestone_number(milestone_dict):
+    """Carga JSON file into a dictionary."""
+    return len(milestone_dict['hitos'])
+
+
 if __name__ == '__main__':
     milestones = read_json()
     print(
         json.dumps(
             milestones, sort_keys=True, indent=2, separators=(',', ' : ')))
+    print('Milestone number: ', milestone_number(milestones))
