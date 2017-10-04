@@ -2,9 +2,9 @@
 
 ## TOC
 
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:0 orderedList:0 -->
 
-- [Descripción](#descripcin)
+- [Descripción](#descripción)
 - [Enlaces a los ejercicios](#enlaces-a-los-ejercicios)
 - [Licencia](#licencia)
 
