@@ -1,6 +1,6 @@
 # Ejercicios propuestos del tema 2
 
-## TOC
+## Índice
 <!-- TOC depthFrom:3 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Ejercicio 1 y 2](#ejercicio-1-y-2)

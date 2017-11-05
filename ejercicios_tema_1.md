@@ -1,6 +1,6 @@
 # Ejercicios propuestos del tema 1
 
-## TOC
+## Índice
 <!-- TOC depthFrom:3 depthTo:9 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Ejercicio 1](#ejercicio-1)
@@ -121,7 +121,7 @@ Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cm
 
 * Máquina virtual corriendo Ubuntu Server en el primer ordenador portatil: Intel(R) Core(TM) i7-3612QM CPU @ 2.10GHz
 
-![Ubuntu Server](./img/vm_lscpu.png "lscpu en Ubuntu Server")
+![Ubuntu Server](./img/t1-ej3-vm_lscpu.png "lscpu en Ubuntu Server")
 
 ### Ejercicio 4
 **Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.**
@@ -142,7 +142,7 @@ Podemos comprobar que sí que tiene soporte para virtualizar.
 
 Dado que he tenido que instalar un [hipervisor](https://www.virtualbox.org/ "VirtualBox") para otras asignaturas, ya lo tengo funcionando.
 
-![VirtualBox](./img/virtualbox.png "Hipervisor")
+![VirtualBox](./img/t1-ej4-virtualbox.png "Hipervisor")
 
 ### Ejercicio 5
 **Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.**
@@ -152,16 +152,16 @@ Para este ejercicio, voy a utilizar un código de Azure que me ha proporcionado 
 Para utilizar el código promocional tenemos que entrar en [la página de azure](https://www.microsoftazurepass.com) y seguír [los pasos que nos proporciona la propia pagina](https://www.microsoftazurepass.com/Home/HowTo) para el canjeo de códigos
 
 Despues de loguear con la cuenta de Microsoft, tenemos que poner nuestro código promocional:
-![Código](./img/codigo_azure.png)
+![Código](./img/t1-ej5-codigo_azure.png)
 
 Rellenamos la información necesaria:
-![Información](./img/info_azure.png)
+![Información](./img/t1-ej5-info_azure.png)
 
 Después de una serie de procedimientos de validación de la nueva cuenta, podemos acceder a través del correo a la página principal de Azure:
-![Pagina principal](./img/pagina_principal_azure.png)
+![Pagina principal](./img/t1-ej5-pagina_principal_azure.png)
 
 Y finalmente a nuestra subscripción:
-![Subscripcion](./img/subscripcion_azure.png)
+![Subscripcion](./img/t1-ej5-subscripcion_azure.png)
 
 Podemos observar que tenemos la subscripción activada.
 
@@ -169,7 +169,7 @@ Podemos observar que tenemos la subscripción activada.
 **Darse de alta en una web que permita hacer pruebas con alguno de los sistemas de gestión de nube anteriores.**
 
 Dado que tengo subscripción Azure, tenemos que irnos al [panel principal](https://portal.azure.com/ "Panel principal Azure"). Lo siguiente que tenemos que hacer es crear un nuevo `Dev Test` pulsando en `Nuevo > Herramientas de desarrollo > Laboratorios de Dev Test`:
-![Tests](./img/nuevo_dev_test.png)
+![Tests](./img/t1-ej6-nuevo_dev_test.png)
 
 Nos aparecerá la siguiente pantalla en la que podrémos crear los test que consideremos oportunos:
-![Nuevo Test](./img/info_dev_test.png)
+![Nuevo Test](./img/t1-ej6-info_dev_test.png)
