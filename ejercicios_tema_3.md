@@ -1,10 +1,13 @@
 # Ejercicios propuestos del tema 3
 
 ## Índice
-<!-- TOC depthFrom:3 depthTo:9 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:3 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Ejercicio 1](#ejercicio-1)
 - [Ejercicio 2 y 3](#ejercicio-2-y-3)
+- [Ejercicio 4](#ejercicio-4)
+- [Ejercicio 5](#ejercicio-5)
+	- [Pruebas en local](#pruebas-en-local)
 	- [Crear una nueva aplicación de heroku](#crear-una-nueva-aplicación-de-heroku)
 	- [Nombre de la aplicación](#nombre-de-la-aplicación)
 	- [Desplegado automático con github](#desplegado-automático-con-github)
@@ -34,7 +37,29 @@ Y seguimos la guía hasta el despliegue de la aplicación:
 
 Para estos ejercicios he elegido un repositorio que ya tenía, [hitos-iv](https://github.com/lulivi/hitos-iv).
 
-Para utilizar un repositorio de github y que se auto ejecute la aplicación cada vez que hacemos un push a master, hay que seguír los siguientes pasos.
+### Ejercicio 4
+**Crear pruebas para las diferentes rutas de la aplicación.**
+
+Los tests para la aplicación se pueden encontrar en la [carpeta de tests](https://github.com/lulivi/hitos-iv/blob/master/tests/test_hug_hitos_iv.py).
+
+### Ejercicio 5
+**Instalar y echar a andar tu primera aplicación en Heroku.**
+
+Voy a utilizar la aplicación del ejercicio 2, hecha para hitos anteriores.
+
+Para utilizar un repositorio de github y que se despliegue automáticamente la aplicación cada vez que hacemos un push a master, hay que seguír los siguientes pasos.
+
+#### Pruebas en local
+
+Para probar en local antes de conectar el repositorio con github, podemos utilizar el comando
+
+    $ heroku local
+
+Esto ejecutará los comandos proporcionados en el archivo Procfile obteniendo esta salida:
+
+![Heroku local](./img/t3-ej5-heroku_local.png)
+
+Entonces, accediendo a `localhost:5000` o `0.0.0.0:5000` veremos las salidas de a aplicación.
 
 #### Crear una nueva aplicación de heroku
 
@@ -53,7 +78,6 @@ Introducimos el nombre de nuestra aplicación (en blanco si queremos que nos de 
 Finalmente seleccionamos como método de desplegado `github` y clicamos el desplegado automático:
 
 ![Desplegado automático](./img/t3-ej2-auto_deploy.png)
-
 
 #### Fin!
 
