@@ -12,6 +12,8 @@
 	- [Nombre de la aplicación](#nombre-de-la-aplicación)
 	- [Desplegado automático con github](#desplegado-automático-con-github)
 	- [Fin!](#fin)
+- [Ejercicio 7 y 8](#ejercicio-7-y-8)
+	- [Creamos una nueva aplicación en heroku](#creamos-una-nueva-aplicación-en-heroku)
 
 <!-- /TOC -->
 
@@ -87,3 +89,44 @@ Puedes acceder a la [aplicación de hitos](https://hitos-iv.herokuapp.com/) y ha
 - `/all` - Mostrará el contenido del archivo [hitos.json](https://github.com/lulivi/hitos-iv/blob/master/data/hitos.json)
 - `/get/{id}` - Mostará el contenido del hito indicado
 - `/number` - Mostrará el número de hitos
+
+### Ejercicio 7 y 8
+**Haz alguna modificación a tu aplicación en node.js para Heroku, sin olvidar añadir los tests para la nueva funcionalidad, y configura el despliegue automático a Heroku usando Snap CI o alguno de los otros servicios, como Codeship, mencionados en StackOverflow**
+
+Dado que de primeras he utilizado la integración de travis con github y su conexión con heroku para el auto desplegado, voy a probar otra funcionalidad usando [Heroku pipeline](https://blog.heroku.com/heroku_flow_pipelines_review_apps_and_github_sync#introducing-pipelines) (viene a ser lo mismo que usar [snap CI](https://snap-ci.com/) que se ha dejado de utilizar).
+
+#### Creamos una nueva aplicación en heroku
+
+Esta nueva aplicación será para la producción. Creamos la nueva app y en vez de conectarla con github, le damos a crear una nueva pipeline con ella:
+
+![Production pipeline](./img/t3-ej8-create_pipeline.png)
+
+
+#### Añadimos la staging app
+
+Añadimos la aplicación que ya teníamos de los ejercicios anteriores a pre-producción (staging):
+
+![Pre-producción](./img/t3-ej8-select_staging_app.png)
+
+#### Creamos una app-review
+
+Finalmente, indicamos que queremos configurar un revisor de apps cuando nos manden pull requests:
+![Review app](./img/t3-ej8-add_review.png)
+
+Aceptamos crear:
+
+![Creación  app.json](./img/t3-ej8-create_app_json.png)
+
+Y la configuramos:
+
+![Configuración app.json](./img/t3-ej8-configure_app_json.png)
+
+#### Probando app-review
+
+Nos dirigimos a github y hacemos un pull request con alguna modificación a `master`:
+
+![Hacer pull request](./img/t3-ej8-pull_request.png)
+
+Nos aparecera un apalicación para probarla en la columna izquierda (Review apps). Una vez combinado el patch con el master, desaparece la aplicación y nos encontramos la posibilidad de desplegar a producción la nueva aplicación.
+
+![Pull request mergeado](./img/t3-ej8-merged_pull_request.png)
