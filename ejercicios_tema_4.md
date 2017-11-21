@@ -69,9 +69,43 @@ Como en el primer ejercicio, usamos el gestor de paquetes pacman:
 ### Ejercicio 4: Instalación de imágenes
 #### Parte 1: Imagenes adicionales
 **Instalar a partir de docker una imagen alternativa de Ubuntu y alguna adicional, por ejemplo de CentOS.**
+
+Descargo la imagen de [Ubuntu](https://hub.docker.com/r/_/ubuntu/):
+
+	$ sudo docker pull ubuntu
+	[sudo] password for root:
+	Using default tag: latest
+	latest: Pulling from library/ubuntu
+	660c48dd555d: Pull complete
+	4c7380416e78: Pull complete
+	421e436b5f80: Pull complete
+	e4ce6c3651b3: Pull complete
+	be588e74bd34: Pull complete
+	Digest: sha256:7c67a2206d3c04703e5c23518707bdd4916c057562dd51c74b99b2ba26af0f79
+	Status: Downloaded newer image for ubuntu:latest
+
 #### Parte 2: Imagen con MongoDB
 **Buscar e instalar una imagen que incluya MongoDB.**
 
+Para instalar Debian con [MongoDB](https://hub.docker.com/_/mongo/):
+
+	$ sudo docker pull mongo:3.0.15-wheezy
+	[sudo] password for root:
+	3.0.15-wheezy: Pulling from library/mongo
+	0f873bc6703c: Pull complete
+	c94a004d7355: Pull complete
+	dcfa5a3afb2b: Pull complete
+	769e01fbd0e1: Pull complete
+	6da4bf642cb3: Pull complete
+	fa1b36f4df7f: Pull complete
+	cab03bef87d3: Pull complete
+	a8c75060a12a: Pull complete
+	fbb2eb1e5f3e: Pull complete
+	87b47d5e60f5: Pull complete
+	40c448308fd1: Pull complete
+	844c1628792a: Pull complete
+	Digest: sha256:f0e8cd8e3dc16086dc552609623b9951f6cb500282f3c808d75a406a08b999a9
+	Status: Downloaded newer image for mongo:3.0.15-wheezy
 
 ### Ejercicio 5: Instalación de servicios
 **Crear un usuario propio e instalar alguna aplicación tal como nginx en el contenedor creado de esta forma, usando las órdenes propias del sistema operativo con el que se haya inicializado el contenedor.**
@@ -79,10 +113,8 @@ Como en el primer ejercicio, usamos el gestor de paquetes pacman:
 ### Ejercicio 6: Imagen persisitente
 **Crear a partir del contenedor anterior una imagen persistente con commit.**
 
-
 ### Ejercicio 7: Dockerfile
 **Crear un Dockerfile para el servicio web que se ha venido desarrollando en el proyecto de la asignatura.**
-
 
 ### Ejercicio 8: Desplegado
 **Desplegar un contenedor en alguno de estos servicios, de prueba gratuita o gratuitos.**
