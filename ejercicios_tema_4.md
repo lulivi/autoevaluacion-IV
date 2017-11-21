@@ -113,8 +113,54 @@ Para instalar Debian con [MongoDB](https://hub.docker.com/_/mongo/):
 ### Ejercicio 5: Instalación de servicios
 **Crear un usuario propio e instalar alguna aplicación tal como nginx en el contenedor creado de esta forma, usando las órdenes propias del sistema operativo con el que se haya inicializado el contenedor.**
 
+Si no nos habíamos descargado la imagen de ubuntu, lo hacemos con `sudo docker pull ubuntu`.
+
+Una vez se haya descargado, podemos ver que está correctamente instalada con:
+
+	$ sudo docker images -a
+	REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+	ubuntu              latest              20c44cd7596f        3 days ago          123MB
+
+Iniciamos el contenedor con `bash` haciendo:
+
+	sudo docker run -it 20c44cd7596f /bin/bash
+
+Una vez hemos entrado en el contenedor, podemos observar las imagenes que se crean y los contenedores ejecutandose con [watch](https://www.unix.com/man-page/Linux/1/watch/):
+
+	# Terminal 1: watch -n 5 sudo docker ps --no-trunc
+	Every 5.0s: sudo docker ps                                                                            bug: Tue Nov 21 18:52:46 2017
+
+	CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+	daa43afedd94        20c44cd7596f        "/bin/bash"         24 minutes ago      Up 24 minutes                           dreamy_cray
+
+	# Terminal 2: watch -n 5 sudo docker images -a
+	Every 5.0s: sudo docker images -a                                                                     bug: Tue Nov 21 18:53:45 2017
+
+	REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+	ubuntu              latest              20c44cd7596f        3 days ago          123MB
+
+Volviendo a nuestro contenedor ejecutandose `20c44cd7596f`, realizamos algunos cambios como por ejemplo instalar `nginx`:
+
+root@daa43afedd94:/# apt update && apt upgrade
+root@daa43afedd94:/# apt install -y dialog nginx
+
 ### Ejercicio 6: Imagen persisitente
 **Crear a partir del contenedor anterior una imagen persistente con commit.**
+
+Si no queremos perder los cambios ejecutados en la máquina del ejercicio anterior, debemos hacer un commit del contenedor con la id que nos aparece ejecutando `docker ps --no-trunc`:
+
+	sudo docker commit d557c872a5a4a4f036ad8fb918e63f7dfe2c7c7f06c2fc358d3d711f12b6dd16 ubuntu-nginx
+
+Entonces, el `watch` anterior de docker images cambiara a lo siguiente:
+
+	# Terminal 2: watch -n 5 sudo docker images -a
+	Every 5.0s: sudo docker images -a                                                                     bug: Tue Nov 21 18:53:45 2017
+
+	REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+	ubuntu-nginx        latest              244d8664559b        28 minutes ago      164MB
+	ubuntu              latest              20c44cd7596f        3 days ago          123MB
+
+Y ya tendríamos nuestra imagen de ubuntu con nginx instalado.
 
 ### Ejercicio 7: Dockerfile
 **Crear un Dockerfile para el servicio web que se ha venido desarrollando en el proyecto de la asignatura.**
