@@ -11,6 +11,9 @@
 	- [Parte 1: Imagenes adicionales](#parte-1-imagenes-adicionales)
 	- [Parte 2: Imagen con MongoDB](#parte-2-imagen-con-mongodb)
 - [Ejercicio 5: Instalación de servicios](#ejercicio-5-instalación-de-servicios)
+- [Ejercicio 6: Imagen persisitente](#ejercicio-6-imagen-persisitente)
+- [Ejercicio 7: Dockerfile](#ejercicio-7-dockerfile)
+- [Ejercicio 8: Desplegado](#ejercicio-8-desplegado)
 
 <!-- /TOC -->
 
@@ -116,5 +119,57 @@ Para instalar Debian con [MongoDB](https://hub.docker.com/_/mongo/):
 ### Ejercicio 7: Dockerfile
 **Crear un Dockerfile para el servicio web que se ha venido desarrollando en el proyecto de la asignatura.**
 
+Para este ejercicio he utilizado mi repositorio de [hitos-iv](https://github.com/lulivi/hitos-iv/blob/master/Dockerfile)
+
+	>Dockerfile
+	FROM python
+
+	RUN mkdir -p /usr/src/app
+	WORKDIR /usr/src/app/
+
+	COPY requirements.txt /usr/src/app/
+	RUN pip install --no-cache-dir -r requirements.txt
+
+	COPY . /usr/src/app
+
+	CMD cd hitos_iv/ && hug -p 80 -f hug_hitos_iv.py
+
+	EXPOSE 80
+
+Una vez creado el archivo, hacemos commit de éste, pues docker utiliza respositorios git.
+
+
 ### Ejercicio 8: Desplegado
 **Desplegar un contenedor en alguno de estos servicios, de prueba gratuita o gratuitos.**
+
+Para el desplegado del contenedor he utilizado [Zeit](https://zeit.co/) siguiendo los siguientes pasos:
+
+1. Registrarnos en Zeit.
+2. Instalar la herramienta [now](https://zeit.co/download#command-line).
+3. [Crear el dockerfile](#ejercicio-7-dockerfile) de nuestra app.
+4. Desplegar nuestra app en Zeit con `now --public`.
+5. ¡Ya tenemos nuestra app desplegada! Su url nos la indica `now`:
+
+
+	$ now --public
+	> Deploying ~/git/hitos-iv under lulivi
+	> Ready! https://hitos-iv-ttaxlimbsx.now.sh [5s]  # <---- Aquí tenemos la url
+	> Synced 1 file (231B) [0ms]
+	> Initializing…
+	> Building
+	> ▲ docker build
+	Sending build context to Docker daemon 117.2 kBkB
+	> Step 1 : FROM python
+	> latest: Pulling from library/python
+	> Digest: sha256:bd54e27f94bfbe86ffe42690bcce8f33f4972902b529943e71a3226d28e8953a
+	> Status: Downloaded newer image for python:latest
+	>  ---> 79e1dc9af1c1
+	> Step 2 : RUN mkdir -p /usr/src/app
+	>  ---> Running in 6d5ddcc60903
+	...
+	> Removing intermediate container 0347c60661d6
+	> Successfully built 6993b1abdc94
+	> ▲ Storing image
+	> ▲ Deploying image
+	> ▲ Container started
+	> Deployment complete!
