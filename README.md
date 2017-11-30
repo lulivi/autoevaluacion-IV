@@ -18,7 +18,8 @@ Repositorio para autoevaluación y resolución de ejercicios de la asignatura
 - [Ejercicios tema 1](ejercicios_tema_1.md)
 - [Ejercicios tema 2](ejercicios_tema_2.md)
 - [Ejercicios tema 3](ejercicios_tema_3.md)
-- [Ejercicios tema 4](ejercicios_tema_3.md)
+- [Ejercicios tema 4](ejercicios_tema_4.md)
+- [Ejercicios tema 5](ejercicios_tema_5.md)
 
 ### Licencia
 

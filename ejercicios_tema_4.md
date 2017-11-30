@@ -4,7 +4,7 @@
 
 <!-- TOC depthFrom:3 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Ejercicio 1](#ejercicio-1)
+- [Ejercicio 1: LXC](#ejercicio-1-lxc)
 - [Ejercicio 2: creación y ejecución de contenedores](#ejercicio-2-creación-y-ejecución-de-contenedores)
 - [Ejercicio 3: Docker](#ejercicio-3-docker)
 - [Ejercicio 4: Instalación de imágenes](#ejercicio-4-instalación-de-imágenes)
@@ -17,7 +17,7 @@
 
 <!-- /TOC -->
 
-### Ejercicio 1
+### Ejercicio 1: LXC
 **Instala LXC en tu versión de Linux favorita. Normalmente la versión en desarrollo, disponible tanto en GitHub como en el sitio web está bastante más avanzada; para evitar problemas sobre todo con las herramientas que vamos a ver más adelante, conviene que te instales la última versión y si es posible una igual o mayor a la 1.0.**
 
 Buscamos el paquete con el gestor pacman:
